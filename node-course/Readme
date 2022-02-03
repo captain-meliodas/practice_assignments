@@ -1,0 +1,11 @@
+npm packages :--
+
+1. nodemon --> automatically restart and execute the scripts when changes has been made
+2. validator --> used to validate emails, url, phone etc.
+3. chalk --> to print logs with different styles and colors.
+4. yargs --> npm package with argument parsing technique
+
+
+Notes:------
+
+1. Arrow function do not bind own this with the scope.

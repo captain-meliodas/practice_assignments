@@ -1,0 +1,7 @@
+Mongoose Library
+
+--> Custom validators --> to set the field validations.
+--> built in validatiors --> required, enum, match, minlength etc.
+--> uses monngodb in backend to connect through monngodb.
+--> add an extra field __v (version control), the use of the field is you can check how
+    many times document is updated. 

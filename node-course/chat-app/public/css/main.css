@@ -1,0 +1,63 @@
+body {
+    background: #aecfeb;
+    padding: 1rem;
+}
+
+.chat__sidebar {
+    background: #7e7e7e;
+    padding: 1rem;
+}
+
+#increment {
+    width: 50px;
+    margin-left: 15px;
+}
+
+#welcome_form {
+    flex-flow: row wrap;
+    margin-top: 15px;
+    flex: 0 0 70%;
+}
+
+#send_location {
+    margin-top: 15px;
+    flex: 0 0 30%;
+    text-align: end;
+}
+
+#welcome_form #message {
+    flex: 0 0 50%;
+}
+
+#welcome_form button {
+    flex: 0 0 45%;
+    max-width: 100px;
+    margin-left: 15px;
+}
+
+#emailHelp {
+    flex: 0 0 100%;
+}
+
+.message-box span {
+    font-size: 11px;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.message-box p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.message-box h6 {
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+#messages_div {
+    border: 1px solid;
+    padding: 10px 15px;
+    height: 250px;
+    overflow: auto;
+}

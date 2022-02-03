@@ -1,0 +1,176 @@
+swagger: "2.0"
+info:
+  title: Task-Manager API
+  descrption: API endopoints for managing the task
+  version: 1.0.0
+  contact:
+    email: ankit.singh@gslab.com
+  license:
+    name: Apache 2.0
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  servers:
+    -url: "http://127.0.0.1:3000"
+    description: This is the local development server
+
+schemes: [http,https]
+
+paths:
+  /users:
+    post:
+      summary: Returns User Object
+      description: Create User
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: user
+          description: The user to create.
+          schema:
+            type: object
+            required:
+              - name
+              - email
+              - password
+            properties:
+              name:
+                type: string
+                example: Ankit Singh
+              email:
+                type: string
+                example: ankit@singh.com
+              password:
+                type: string
+                example: ankit12345
+      responses:
+        200:
+          description: User created
+          schema:
+            type: object
+            properties:
+              _id:
+                type: object
+              name:
+                type: string
+              email:
+                type: string
+                
+        400:
+          description: User Error
+
+    get:
+      summary: Returns the User Object
+      description: Route to return user present in the database whoes token is provided
+      parameters:
+        - in: header
+          name: Authorization
+          description: The login token for the test user.
+          required: true
+          default: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTQ5NzQ1OWEzYzZmNDQ0MTQxOGIwY2EiLCJpYXQiOjE2MzIyMDM4NjV9.-inptk42fdOOMiUVGTCPUNxznQz7N48saPq73QnoPpU"
+          type: string
+      responses:
+        200:
+          description: Returns all users present in the database
+          schema:
+            type: object
+        404:
+          description: User not found
+        401:
+          description: Unathourised user
+  
+  /user/login:
+    post:
+      summary: Returns User Object
+      description: Endpoint for user to login and create token
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: user
+          description: The user to log in.
+          schema:
+            type: object
+            required:
+              - email
+              - password
+            properties:
+              email:
+                type: string
+                example: ankit@singh.com
+              password:
+                type: string
+                example: ankit12345
+      responses:
+        200:
+          description: User logged in
+          schema:
+            type: object
+            properties:
+              _id:
+                type: object
+              name:
+                type: string
+              email:
+                type: string
+                
+        404:
+          description: User Not Found
+  
+  /users/{userId}:
+    patch:
+      summary: Returns User Object
+      description: Endpoint for user to login and create token
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: userId #this should be match with variable in path
+          description: The user to update.
+          required: true
+          default: "61441a285288151f2261584c"
+          schema:
+            type: string
+          
+      responses:
+        200:
+          description: User logged in
+          schema:
+            type: object
+            properties:
+              _id:
+                type: object
+              name:
+                type: string
+              email:
+                type: string
+                
+        404:
+          description: User Not Found
+
+    delete:
+      summary: Returns User Object
+      description: Endpoint for user to login and create token
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: userId #this should be match with variable in path
+          description: The user to update.
+          required: true
+          schema:
+            type: string
+          
+      responses:
+        200:
+          description: User logged in
+          schema:
+            type: object
+            properties:
+              _id:
+                type: object
+              name:
+                type: string
+              email:
+                type: string
+                
+        404:
+          description: User Not Found
