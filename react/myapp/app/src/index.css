@@ -1,0 +1,36 @@
+body {
+  background: aliceblue;
+}
+.book-details .img-container img {
+  max-width: 190px;
+  object-fit: cover;
+  max-height: 190px;
+}
+
+.book-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.book-details {
+  flex: 0 0 20%;
+  background: #ffffff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 1rem;
+}
+
+.book-information .title {
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 0;
+}
+.book-information .author {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
