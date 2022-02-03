@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-app:
+    build:
+      context: . #where all required files are placed to build image
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/app/node_modules
+      - .:/usr/app
