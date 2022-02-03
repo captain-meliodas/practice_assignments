@@ -1,0 +1,43 @@
+create a docker image from current directory with tag name --> sudo docker build -t ankitsinghgslab/nodejsapp .
+create a docker container with attached port from created image --> sudo docker run -p 8080:8080 ankitsinghgslab/nodejsapp
+create a docker container with attached port and reference to local folder from created image --> sudo docker run -v $(pwd):/usr/app -p 8080:8080 ankitsinghgslab/nodejsapp
+start a container --> sudo docker start <docker_id>
+stop a container --> sudo docker stop <docker_id> :::takes 10 sec to stop container (Post process work)
+stop a container --> sudo docker kill <docker_id> :::(Instant stop)
+start existing container with formatting --> sudo docker exec -it <docker_id> sh
+docker attach <docker_id> --> attach stdin of the primary process in the container
+
+docker-compose.yml -------------->
+'-' --> denotes an array in docker compose
+image --> image used by the container
+build --> path to dockerfile to build custom image
+ports --> mapping of ports from container to host machine
+services --> name of the containers to create with image or build to use and mapping of ports
+
+docker compose commands (docker-compose.yml should be present in the directory before using docker compose) ---------->
+
+docker-compose ps --> to check status of all docker containers created by docker-compose.yml
+sudo docker-compose up -d --> to run all docker containers in background simultaneously in docker-compose.yml
+
+sudo docker-compose down --> to stop all docker containers running in background simultaneously created by docker-compose.yml
+
+Restart Policies for docker-compose.yml --------->
+"no" --> Never attempt to restart (no should be in quotes in yml file)
+always --> If this container stop for any reason always attempt to restart
+on-failure --> only restart if the container stops with an error code
+unless-stopped --> always restart unless we (the developers) forcibly stop it
+
+docker management commands--------------------->
+docker <mgmt commands> <sub commands> [options]
+
+docker coantainer ls
+docker image ls
+docker network inspect <virtual n/w name>
+
+Notes---
+$(pwd) will show present working directory (only for linux and macos)
+-v depicts volumes to reference in local folder
+
+docker compose -------
+templating
+healthchecks

@@ -1,0 +1,10 @@
+Docker Swarm
+Docker Machine
+- How to check if container is still healthy? 
+- How does ID of Docker image get generated?  https://windsock.io/explaining-docker-image-ids/
+Docker Networking basics https://docs.docker.com/engine/tutorials/networkingcontainers/#next-steps
+
+How does Docker(not container) store data?
+- Different options for storage [basic driver names]
+- Different options for networking [basic driver names]
+
