@@ -3,3 +3,18 @@ kth smallest ---> https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bs
 
 rounding float values to decimal
 conversion of binary octal and hexadecimal with floating binary 
+
+level order traversal --> https://www.geeksforgeeks.org/level-order-tree-traversal/
+spiral traversal --> https://techiedelight.com/practice/?problem=SpiralOrderTraversal
+matrix spiral traversal --> https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/
+
+# dec = int(number_string,base) important for number conversion --> first go to decimal then use bin() or oct() or hex()
+
+if binary tree is sum tree or not https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/
+
+matrix spiral order https://www.techiedelight.com/shift-matrix-elements-1-spiral-order/
+
+https://www.techiedelight.com/connect-n-ropes-with-minimal-cost/ Heapq -----
+
+# https://techiedelight.com/practice/?problem=TurnOnKthBit
+# https://techiedelight.com/practice/?problem=TurnOffKthBit
