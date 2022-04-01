@@ -16,7 +16,7 @@ def minCoins(coins,m,v):
         return -1
     return table[v]
 
-coins = [9,6,5,1]
+coins = [9,6,1,5]
 m = len(coins)
 sum_ = 12
 

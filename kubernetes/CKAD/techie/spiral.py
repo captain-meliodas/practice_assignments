@@ -52,35 +52,35 @@ def spirallyTraverse(matrix, r, c):
 	sc = 0
 	i = 0
 	res = []
-	prev = matrix[0][0]
+	# prev = matrix[0][0]
 	while sr < r and sc < c:
 		for i in range(sc,c):
 			res.append(matrix[sr][i])
-			temp = matrix[sr][i]
-			matrix[sr][i] = prev
-			prev = temp
+			# temp = matrix[sr][i]
+			# matrix[sr][i] = prev
+			# prev = temp
 		sr += 1
 		for i in range(sr,r):
 			res.append(matrix[i][c-1])
-			temp = matrix[i][c-1]
-			matrix[i][c-1] = prev
-			prev = temp
+			# temp = matrix[i][c-1]
+			# matrix[i][c-1] = prev
+			# prev = temp
 		c -= 1
 		if sr < r:
 			for i in range(c-1,sc-1,-1):
 				res.append(matrix[r-1][i])
-				temp = matrix[r-1][i]
-				matrix[r-1][i] = prev
-				prev = temp
+				# temp = matrix[r-1][i]
+				# matrix[r-1][i] = prev
+				# prev = temp
 			r -= 1
 		if sc < c:
 			for i in range(r-1,sr-1,-1):
 				res.append(matrix[i][sc])
-				temp = matrix[i][sc]
-				matrix[i][sc] = prev
-				prev = temp
+				# temp = matrix[i][sc]
+				# matrix[i][sc] = prev
+				# prev = temp
 			sc += 1
-	matrix[0][0] = prev
+	# matrix[0][0] = prev
 	print(res)
 	print(matrix)
 matrix =[[ 1,2,3,4,5],
