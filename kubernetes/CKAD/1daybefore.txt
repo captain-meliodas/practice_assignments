@@ -18,3 +18,5 @@ https://www.techiedelight.com/connect-n-ropes-with-minimal-cost/ Heapq -----
 
 # https://techiedelight.com/practice/?problem=TurnOnKthBit
 # https://techiedelight.com/practice/?problem=TurnOffKthBit
+
+https://www.techiedelight.com/delete-every-n-nodes-linked-list-skipping-m-nodes/

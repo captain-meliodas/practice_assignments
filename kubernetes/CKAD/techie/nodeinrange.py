@@ -3,6 +3,15 @@ class BST():
         self.key = data
         self.lch = None
         self.rch = None
+    def Print(self):
+        if self is None or self.key is None:
+            return
+        
+        if self.lch:
+            self.lch.Print()
+        if self.rch:
+            self.rch.Print()
+        print(self.key,end=" ")
     
     def insert(self,data):
         if self.key is None:
@@ -29,7 +38,6 @@ def countNodes(root,low,high):
     if root:
         if root.key in temp:
             count+=1
-            print(root.key,end=" ")
     
     if root.lch:
         countNodes(root.lch,low,high)
@@ -49,5 +57,5 @@ root.insert(-1)
 root.insert(21)
 root.insert(22)
 countNodes(root,-1,10)
-print()
 print(count)
+root.Print()
